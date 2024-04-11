@@ -12,9 +12,11 @@ services:
       - "80:3000"
     environment:
       OPENAI_API_KEY: "FreeAskInternet"
+      GOOGLE_URL: "https://guge.51xmi.com"
+      GOOGLE_API_KEY: "AIzaSyDmpx58uHjRSEhq4OHqxLU4q8EIpJChkcs"
       # CODE: "FreeAskInternet" # 如果你想要设置页面的访问密码，请修改这里
       BASE_URL: "http://backend:8000"
-      CUSTOM_MODELS: "-all,+gpt-3.5-turbo"
+      CUSTOM_MODELS: "-all,+gpt-3.5-turbo,+gemini-pro"
     depends_on:
       - freegpt35
     restart: always
